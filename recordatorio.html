@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recordatorio</title>
+
+<style>
+
+body{
+
+    margin:0;
+    height:100vh;
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:Arial, sans-serif;
+}
+
+.contenedor{
+
+    display:none;
+
+    background:rgba(0,0,0,.6);
+
+    color:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    width:90%;
+    max-width:500px;
+
+    
+}
+
+button{
+
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+
+    background:#28a745;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+}
+
+.espera{
+
+    color:white;
+    font-size:30px;
+    background:rgba(0,0,0,.6);
+    padding:30px;
+    border-radius:20px;
+}
+
+</style>
+</head>
+<body>
+
+<div id="espera" class="espera">
+
+    ⏳ Esperando la hora del medicamento...
+
+</div>
+
+<button id="activarAudio">
+    🔔 Activar Alarmas
+</button>
+
+<div id="contenedor" class="contenedor">
+
+    <h1 id="nombre"></h1>
+
+    <h2 id="dosis"></h2>
+
+    <h3 id="hora"></h3>
+
+    
+
+     <br><br>
+
+
+    <button onclick="detenerAlarma()">
+
+        ✓ Tomado
+
+    </button>
+
+</div>
+
+<script src="recordatorio.js"></script>
+
+</body>
+</html>
